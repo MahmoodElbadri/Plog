@@ -1,0 +1,46 @@
+# Angular build output
+/dist
+/tmp
+/out-tsc
+/.angular/cache
+
+# Node dependencies
+/node_modules
+
+# IDEs and editors
+.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*.sublime-project
+.vscode/
+*.code-workspace
+
+# Compiled output
+*.js
+*.js.map
+
+# Logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files (optional — only if you store secrets)
+# comment out if your env files are safe to commit
+# /src/environments/environment*.ts
+
+# Coverage reports
+/coverage
+
+# Misc
+/.sass-cache
+/connect.lock
+/typings

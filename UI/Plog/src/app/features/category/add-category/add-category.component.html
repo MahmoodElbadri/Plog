@@ -1,0 +1,21 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <h1>Add Category</h1>
+        </div>
+      <form #form="ngForm" (ngSubmit)="onFormSubmit()">
+        <div class="mb-3">
+          <label for="categoryName" class="form-label">Category Name</label>
+          <input type="text" class="form-control" id="categoryName" [(ngModel)]="category.name" name="categoryName">
+        </div>
+        <div class="mb-3">
+          <label for="categoryUrlHandle" class="form-label">Category Url Handle</label>
+          <input type="text" class="form-control" [(ngModel)]="category.urlHandle" id="categoryUrlHandle" name="categoryUrlHandle">
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary col-6">Submit</button>
+          <button type="reset" class="btn btn-danger col-6">Reset</button>
+        </div>
+      </form>
+    </div>
+</div>

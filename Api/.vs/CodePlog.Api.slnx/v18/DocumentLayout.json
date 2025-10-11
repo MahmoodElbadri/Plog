@@ -1,0 +1,259 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Zpractice\\Full Stack\\SameerSaini\\Blog\\Api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C9F25FB2-39F9-3CBA-8E50-6D1BBDC7D1A2}|CodePlog.Api\\CodePlog.Api.csproj|d:\\zpractice\\full stack\\sameersaini\\blog\\api\\codeplog.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9F25FB2-39F9-3CBA-8E50-6D1BBDC7D1A2}|CodePlog.Api\\CodePlog.Api.csproj|solutionrelative:codeplog.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9F25FB2-39F9-3CBA-8E50-6D1BBDC7D1A2}|CodePlog.Api\\CodePlog.Api.csproj|d:\\zpractice\\full stack\\sameersaini\\blog\\api\\codeplog.api\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{C9F25FB2-39F9-3CBA-8E50-6D1BBDC7D1A2}|CodePlog.Api\\CodePlog.Api.csproj|solutionrelative:codeplog.api\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9F25FB2-39F9-3CBA-8E50-6D1BBDC7D1A2}|CodePlog.Api\\CodePlog.Api.csproj|d:\\zpractice\\full stack\\sameersaini\\blog\\api\\codeplog.api\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9F25FB2-39F9-3CBA-8E50-6D1BBDC7D1A2}|CodePlog.Api\\CodePlog.Api.csproj|solutionrelative:codeplog.api\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9F25FB2-39F9-3CBA-8E50-6D1BBDC7D1A2}|CodePlog.Api\\CodePlog.Api.csproj|d:\\zpractice\\full stack\\sameersaini\\blog\\api\\codeplog.api\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9F25FB2-39F9-3CBA-8E50-6D1BBDC7D1A2}|CodePlog.Api\\CodePlog.Api.csproj|solutionrelative:codeplog.api\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9F25FB2-39F9-3CBA-8E50-6D1BBDC7D1A2}|CodePlog.Api\\CodePlog.Api.csproj|d:\\zpractice\\full stack\\sameersaini\\blog\\api\\codeplog.api\\irepositories\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9F25FB2-39F9-3CBA-8E50-6D1BBDC7D1A2}|CodePlog.Api\\CodePlog.Api.csproj|solutionrelative:codeplog.api\\irepositories\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9F25FB2-39F9-3CBA-8E50-6D1BBDC7D1A2}|CodePlog.Api\\CodePlog.Api.csproj|d:\\zpractice\\full stack\\sameersaini\\blog\\api\\codeplog.api\\models\\domain\\dtos\\categoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9F25FB2-39F9-3CBA-8E50-6D1BBDC7D1A2}|CodePlog.Api\\CodePlog.Api.csproj|solutionrelative:codeplog.api\\models\\domain\\dtos\\categoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9F25FB2-39F9-3CBA-8E50-6D1BBDC7D1A2}|CodePlog.Api\\CodePlog.Api.csproj|d:\\zpractice\\full stack\\sameersaini\\blog\\api\\codeplog.api\\models\\domain\\profiles\\categoryprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9F25FB2-39F9-3CBA-8E50-6D1BBDC7D1A2}|CodePlog.Api\\CodePlog.Api.csproj|solutionrelative:codeplog.api\\models\\domain\\profiles\\categoryprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9F25FB2-39F9-3CBA-8E50-6D1BBDC7D1A2}|CodePlog.Api\\CodePlog.Api.csproj|d:\\zpractice\\full stack\\sameersaini\\blog\\api\\codeplog.api\\models\\domain\\dtos\\categoryaddrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9F25FB2-39F9-3CBA-8E50-6D1BBDC7D1A2}|CodePlog.Api\\CodePlog.Api.csproj|solutionrelative:codeplog.api\\models\\domain\\dtos\\categoryaddrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9F25FB2-39F9-3CBA-8E50-6D1BBDC7D1A2}|CodePlog.Api\\CodePlog.Api.csproj|d:\\zpractice\\full stack\\sameersaini\\blog\\api\\codeplog.api\\migrations\\20251011145853_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9F25FB2-39F9-3CBA-8E50-6D1BBDC7D1A2}|CodePlog.Api\\CodePlog.Api.csproj|solutionrelative:codeplog.api\\migrations\\20251011145853_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9F25FB2-39F9-3CBA-8E50-6D1BBDC7D1A2}|CodePlog.Api\\CodePlog.Api.csproj|d:\\zpractice\\full stack\\sameersaini\\blog\\api\\codeplog.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C9F25FB2-39F9-3CBA-8E50-6D1BBDC7D1A2}|CodePlog.Api\\CodePlog.Api.csproj|solutionrelative:codeplog.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9F25FB2-39F9-3CBA-8E50-6D1BBDC7D1A2}|CodePlog.Api\\CodePlog.Api.csproj|d:\\zpractice\\full stack\\sameersaini\\blog\\api\\codeplog.api\\models\\domain\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9F25FB2-39F9-3CBA-8E50-6D1BBDC7D1A2}|CodePlog.Api\\CodePlog.Api.csproj|solutionrelative:codeplog.api\\models\\domain\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9F25FB2-39F9-3CBA-8E50-6D1BBDC7D1A2}|CodePlog.Api\\CodePlog.Api.csproj|d:\\zpractice\\full stack\\sameersaini\\blog\\api\\codeplog.api\\data\\plogdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9F25FB2-39F9-3CBA-8E50-6D1BBDC7D1A2}|CodePlog.Api\\CodePlog.Api.csproj|solutionrelative:codeplog.api\\data\\plogdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9F25FB2-39F9-3CBA-8E50-6D1BBDC7D1A2}|CodePlog.Api\\CodePlog.Api.csproj|d:\\zpractice\\full stack\\sameersaini\\blog\\api\\codeplog.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C9F25FB2-39F9-3CBA-8E50-6D1BBDC7D1A2}|CodePlog.Api\\CodePlog.Api.csproj|solutionrelative:codeplog.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9F25FB2-39F9-3CBA-8E50-6D1BBDC7D1A2}|CodePlog.Api\\CodePlog.Api.csproj|d:\\zpractice\\full stack\\sameersaini\\blog\\api\\codeplog.api\\models\\domain\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9F25FB2-39F9-3CBA-8E50-6D1BBDC7D1A2}|CodePlog.Api\\CodePlog.Api.csproj|solutionrelative:codeplog.api\\models\\domain\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1a46fd64-28d5-434c-8eb3-17a02d419b53}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": ".gitignore",
+              "DocumentMoniker": "D:\\Zpractice\\Full Stack\\SameerSaini\\Blog\\Api\\CodePlog.Api\\.gitignore",
+              "RelativeDocumentMoniker": "CodePlog.Api\\.gitignore",
+              "ToolTip": "D:\\Zpractice\\Full Stack\\SameerSaini\\Blog\\Api\\CodePlog.Api\\.gitignore",
+              "RelativeToolTip": "CodePlog.Api\\.gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-10-11T20:55:19.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CategoryRepository.cs",
+              "DocumentMoniker": "D:\\Zpractice\\Full Stack\\SameerSaini\\Blog\\Api\\CodePlog.Api\\Repositories\\CategoryRepository.cs",
+              "RelativeDocumentMoniker": "CodePlog.Api\\Repositories\\CategoryRepository.cs",
+              "ToolTip": "D:\\Zpractice\\Full Stack\\SameerSaini\\Blog\\Api\\CodePlog.Api\\Repositories\\CategoryRepository.cs",
+              "RelativeToolTip": "CodePlog.Api\\Repositories\\CategoryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T15:16:16.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ICategoryRepository.cs",
+              "DocumentMoniker": "D:\\Zpractice\\Full Stack\\SameerSaini\\Blog\\Api\\CodePlog.Api\\IRepositories\\ICategoryRepository.cs",
+              "RelativeDocumentMoniker": "CodePlog.Api\\IRepositories\\ICategoryRepository.cs",
+              "ToolTip": "D:\\Zpractice\\Full Stack\\SameerSaini\\Blog\\Api\\CodePlog.Api\\IRepositories\\ICategoryRepository.cs",
+              "RelativeToolTip": "CodePlog.Api\\IRepositories\\ICategoryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T15:15:11.983Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CategoryResponse.cs",
+              "DocumentMoniker": "D:\\Zpractice\\Full Stack\\SameerSaini\\Blog\\Api\\CodePlog.Api\\Models\\Domain\\Dtos\\CategoryResponse.cs",
+              "RelativeDocumentMoniker": "CodePlog.Api\\Models\\Domain\\Dtos\\CategoryResponse.cs",
+              "ToolTip": "D:\\Zpractice\\Full Stack\\SameerSaini\\Blog\\Api\\CodePlog.Api\\Models\\Domain\\Dtos\\CategoryResponse.cs",
+              "RelativeToolTip": "CodePlog.Api\\Models\\Domain\\Dtos\\CategoryResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T15:07:47.251Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CategoryProfile.cs",
+              "DocumentMoniker": "D:\\Zpractice\\Full Stack\\SameerSaini\\Blog\\Api\\CodePlog.Api\\Models\\Domain\\Profiles\\CategoryProfile.cs",
+              "RelativeDocumentMoniker": "CodePlog.Api\\Models\\Domain\\Profiles\\CategoryProfile.cs",
+              "ToolTip": "D:\\Zpractice\\Full Stack\\SameerSaini\\Blog\\Api\\CodePlog.Api\\Models\\Domain\\Profiles\\CategoryProfile.cs",
+              "RelativeToolTip": "CodePlog.Api\\Models\\Domain\\Profiles\\CategoryProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T15:05:21.878Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CategoryAddRequest.cs",
+              "DocumentMoniker": "D:\\Zpractice\\Full Stack\\SameerSaini\\Blog\\Api\\CodePlog.Api\\Models\\Domain\\Dtos\\CategoryAddRequest.cs",
+              "RelativeDocumentMoniker": "CodePlog.Api\\Models\\Domain\\Dtos\\CategoryAddRequest.cs",
+              "ToolTip": "D:\\Zpractice\\Full Stack\\SameerSaini\\Blog\\Api\\CodePlog.Api\\Models\\Domain\\Dtos\\CategoryAddRequest.cs",
+              "RelativeToolTip": "CodePlog.Api\\Models\\Domain\\Dtos\\CategoryAddRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T15:01:58.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "D:\\Zpractice\\Full Stack\\SameerSaini\\Blog\\Api\\CodePlog.Api\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "CodePlog.Api\\Controllers\\CategoriesController.cs",
+              "ToolTip": "D:\\Zpractice\\Full Stack\\SameerSaini\\Blog\\Api\\CodePlog.Api\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "CodePlog.Api\\Controllers\\CategoriesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T15:00:40.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Zpractice\\Full Stack\\SameerSaini\\Blog\\Api\\CodePlog.Api\\Program.cs",
+              "RelativeDocumentMoniker": "CodePlog.Api\\Program.cs",
+              "ToolTip": "D:\\Zpractice\\Full Stack\\SameerSaini\\Blog\\Api\\CodePlog.Api\\Program.cs",
+              "RelativeToolTip": "CodePlog.Api\\Program.cs",
+              "ViewState": "AgIAAAoAAACAMzMzMzMbwBgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T14:36:06.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20251011145853_InitialMigration.cs",
+              "DocumentMoniker": "D:\\Zpractice\\Full Stack\\SameerSaini\\Blog\\Api\\CodePlog.Api\\Migrations\\20251011145853_InitialMigration.cs",
+              "RelativeDocumentMoniker": "CodePlog.Api\\Migrations\\20251011145853_InitialMigration.cs",
+              "ToolTip": "D:\\Zpractice\\Full Stack\\SameerSaini\\Blog\\Api\\CodePlog.Api\\Migrations\\20251011145853_InitialMigration.cs",
+              "RelativeToolTip": "CodePlog.Api\\Migrations\\20251011145853_InitialMigration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T14:58:53.808Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Zpractice\\Full Stack\\SameerSaini\\Blog\\Api\\CodePlog.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "CodePlog.Api\\appsettings.json",
+              "ToolTip": "D:\\Zpractice\\Full Stack\\SameerSaini\\Blog\\Api\\CodePlog.Api\\appsettings.json",
+              "RelativeToolTip": "CodePlog.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-11T14:42:21.777Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\Zpractice\\Full Stack\\SameerSaini\\Blog\\Api\\CodePlog.Api\\Models\\Domain\\Category.cs",
+              "RelativeDocumentMoniker": "CodePlog.Api\\Models\\Domain\\Category.cs",
+              "ToolTip": "D:\\Zpractice\\Full Stack\\SameerSaini\\Blog\\Api\\CodePlog.Api\\Models\\Domain\\Category.cs",
+              "RelativeToolTip": "CodePlog.Api\\Models\\Domain\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T14:33:18.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PlogDbContext.cs",
+              "DocumentMoniker": "D:\\Zpractice\\Full Stack\\SameerSaini\\Blog\\Api\\CodePlog.Api\\Data\\PlogDbContext.cs",
+              "RelativeDocumentMoniker": "CodePlog.Api\\Data\\PlogDbContext.cs",
+              "ToolTip": "D:\\Zpractice\\Full Stack\\SameerSaini\\Blog\\Api\\CodePlog.Api\\Data\\PlogDbContext.cs",
+              "RelativeToolTip": "CodePlog.Api\\Data\\PlogDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T14:39:58.356Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Zpractice\\Full Stack\\SameerSaini\\Blog\\Api\\CodePlog.Api\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "CodePlog.Api\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Zpractice\\Full Stack\\SameerSaini\\Blog\\Api\\CodePlog.Api\\Properties\\launchSettings.json",
+              "RelativeToolTip": "CodePlog.Api\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-11T14:35:47.312Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Post.cs",
+              "DocumentMoniker": "D:\\Zpractice\\Full Stack\\SameerSaini\\Blog\\Api\\CodePlog.Api\\Models\\Domain\\Post.cs",
+              "RelativeDocumentMoniker": "CodePlog.Api\\Models\\Domain\\Post.cs",
+              "ToolTip": "D:\\Zpractice\\Full Stack\\SameerSaini\\Blog\\Api\\CodePlog.Api\\Models\\Domain\\Post.cs",
+              "RelativeToolTip": "CodePlog.Api\\Models\\Domain\\Post.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T14:29:46.496Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+@CodePlog.Api_HostAddress = http://localhost:5296
+
+GET {{CodePlog.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

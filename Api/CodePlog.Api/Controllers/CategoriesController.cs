@@ -28,4 +28,12 @@ public class CategoriesController: ControllerBase
         var response = _mapper.Map<CategoryResponse>(addCat);
         return Ok(response);
     }
+
+    [HttpGet]
+    public async Task<ActionResult<List<CategoryResponse>>> GetAllCategories()
+    {
+        var categories = await _categoryRepository.GetAllAsync();
+        var responses = _mapper.Map<List<CategoryResponse>>(categories);
+        return Ok(responses);
+    }
 }

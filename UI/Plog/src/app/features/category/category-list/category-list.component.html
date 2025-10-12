@@ -3,7 +3,7 @@
     <div class="col-12 d-flex justify-content-between align-items-center">
       <h1 class="mb-0">Category List</h1>
       <a class="btn btn-primary" [routerLink]="['/admin/categories/add']">
-        + Add Category
+        +  Add Category
       </a>
     </div>
   </div>
@@ -15,15 +15,24 @@
           <thead class="table-light">
           <tr>
             <th scope="col">#</th>
+            <th scope="col">ID</th>
             <th scope="col">Name</th>
             <th scope="col">URL Handle</th>
+            <th scope="col">Actions</th>
           </tr>
           </thead>
           <tbody>
           <tr *ngFor="let category of categories; index as i">
             <td>{{ i + 1 }}</td>
+            <td>{{ category.id }}</td>
             <td>{{ category.name }}</td>
             <td>{{ category.urlHandle }}</td>
+            <td>
+              <a id="" class="btn btn-warning" [routerLink]="['/admin/categories', category.id]" role="button">
+                <i class="bi bi-pencil-square"></i>
+                Edit Category
+              </a>
+            </td>
           </tr>
           </tbody>
         </table>

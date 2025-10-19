@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using CodePlog.Api.IRepositories;
+using CodePlog.Api.Models.Domain;
 using CodePlog.Api.Models.Domain.BlogPost;
 using CodePlog.Api.Models.Domain.BlogPost.Dtos;
 using Microsoft.AspNetCore.Mvc;

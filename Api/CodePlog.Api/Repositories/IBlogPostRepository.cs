@@ -1,5 +1,6 @@
 ﻿using CodePlog.Api.Data;
 using CodePlog.Api.IRepositories;
+using CodePlog.Api.Models.Domain;
 using CodePlog.Api.Models.Domain.BlogPost;
 using Microsoft.EntityFrameworkCore;
 

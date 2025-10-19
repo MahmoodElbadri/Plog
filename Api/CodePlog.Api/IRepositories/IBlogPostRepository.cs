@@ -1,4 +1,5 @@
-﻿using CodePlog.Api.Models.Domain.BlogPost;
+﻿using CodePlog.Api.Models.Domain;
+using CodePlog.Api.Models.Domain.BlogPost;
 
 namespace CodePlog.Api.IRepositories;
 

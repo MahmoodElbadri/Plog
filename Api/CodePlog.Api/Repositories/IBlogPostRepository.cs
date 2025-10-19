@@ -14,4 +14,9 @@ public class BlogPostRepository(PlogDbContext db) : IBlogPostRepository
         await db.SaveChangesAsync();
         return blogPost;
     }
+
+    public async Task<IEnumerable<Post>> GetAllAsync()
+    {
+        return await db.Posts.ToListAsync();
+    }
 }

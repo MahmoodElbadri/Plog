@@ -6,4 +6,5 @@ namespace CodePlog.Api.IRepositories;
 public interface IBlogPostRepository
 {
     Task<Post> CreateAsync(Post blogPost);
+    Task<IEnumerable<Post>> GetAllAsync();
 }

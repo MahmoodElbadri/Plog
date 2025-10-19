@@ -3,10 +3,40 @@
     <div class="col-12 pt-4">
       <h1>Add BlogPost</h1>
     </div>
-    <div class="d-flex justify-content-end">
-      <a  class="btn btn-primary" [routerLink]="['/admin/blog-posts/add']" role="button">
+
+    <div class="d-flex justify-content-end mb-3">
+      <a class="btn btn-primary" [routerLink]="['/admin/blog-posts/add']" role="button">
         + Add BlogPost
       </a>
+    </div>
+
+    <div class="col-12">
+      <ng-container *ngIf="blogPosts && blogPosts.length > 0; else noBlogPosts">
+        <table class="table table-bordered table-hover">
+          <thead class="table-light">
+          <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Short Description</th>
+            <th>Is Visible</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let post of blogPosts; index as i">
+            <td>{{ i + 1 }}</td>
+            <td>{{ post.title }}</td>
+            <td>{{ post.shortDescription }}</td>
+            <td>{{ post.isVisible }}</td>
+          </tr>
+          </tbody>
+        </table>
+      </ng-container>
+
+      <ng-template #noBlogPosts>
+        <div class="alert alert-warning text-center mt-4">
+          No blog posts found.
+        </div>
+      </ng-template>
     </div>
   </div>
 </div>

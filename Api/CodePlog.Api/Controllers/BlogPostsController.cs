@@ -20,4 +20,12 @@ public class BlogPostsController(IBlogPostRepository _repo,
         var blogPostResponse = _mapper.Map<BlogPostResponse>(blogPost);
         return Created("", blogPostResponse);
     }
+
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<BlogPostResponse>>> GetAllBlogPosts()
+    {
+        var posts = await _repo.GetAllAsync();
+        var response = _mapper.Map<IEnumerable<BlogPostResponse>>(posts);
+        return Ok(response);
+    }
 }

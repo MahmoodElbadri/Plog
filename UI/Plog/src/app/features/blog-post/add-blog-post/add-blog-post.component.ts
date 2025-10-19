@@ -1,5 +1,7 @@
-import {Component} from '@angular/core';
-import {AddBlogPostModel} from "../models/add-blog-post-model";
+import { Component } from '@angular/core';
+import { AddBlogPostModel } from "../models/add-blog-post-model";
+import { BlogPostService } from "../services/blog-post.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-add-blog-post',
@@ -9,22 +11,35 @@ import {AddBlogPostModel} from "../models/add-blog-post-model";
 export class AddBlogPostComponent {
   model: AddBlogPostModel;
 
-  constructor() {
+  constructor(
+    private blogPostService: BlogPostService,
+    private router: Router
+  ) {
     this.model = {
       title: '',
       shortDescription: '',
-      featureImageUrl: '',
+      featuredImageUrl: '',
       content: '',
       author: '',
       urlHandle: '',
-      publishedDate: new Date().toDateString(),
+      publishedDate: new Date().toISOString(),
       isVisible: true
-    }
-
-
+    };
   }
 
   onFormSubmit() {
-    console.log(this.model);
+    this.blogPostService.addBlogPost(this.model).subscribe({
+      next: () => {
+        console.log(this.model)
+        this.router.navigateByUrl('/admin/blog-posts');
+      },
+      error: (err) => {
+        console.log(this.model)
+        console.error('Error occurred while adding blog post:', err);
+      },
+      complete: () => {
+        console.log('Blog post added successfully');
+      }
+    });
   }
 }

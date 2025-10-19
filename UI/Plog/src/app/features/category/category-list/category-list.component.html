@@ -3,7 +3,7 @@
     <div class="col-12 d-flex justify-content-between align-items-center">
       <h1 class="mb-0">Category List</h1>
       <a class="btn btn-primary" [routerLink]="['/admin/categories/add']">
-        +  Add Category
+        + Add Category
       </a>
     </div>
   </div>
@@ -28,10 +28,16 @@
             <td>{{ category.name }}</td>
             <td>{{ category.urlHandle }}</td>
             <td>
-              <a id="" class="btn btn-warning" [routerLink]="['/admin/categories', category.id]" role="button">
-                <i class="bi bi-pencil-square"></i>
-                Edit Category
-              </a>
+              <div class=" btn-group col-6">
+                <a id="" class="btn btn-warning" [routerLink]="['/admin/categories', category.id]" role="button">
+                  <i class="bi bi-pencil-square"></i>
+                  Edit Category
+                </a>
+                <a id="" class="btn btn-danger" (click)="deleteCategory(category.id)" role="button">
+                  <i class="bi bi-trash"></i>
+                  Delete Category
+                </a>
+              </div>
             </td>
           </tr>
           </tbody>

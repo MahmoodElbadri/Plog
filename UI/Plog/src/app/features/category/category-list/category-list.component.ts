@@ -23,4 +23,26 @@ constructor(private categoryService: CategoryService) {
           }
         });
     }
+
+  deleteCategory(id: string) {
+   // let categoryId = +id;
+    this.categoryService.deleteCategory(id).subscribe({
+      next:()=>{
+        this.categoryService.getCategories().subscribe({
+          next:(categoriesResponses)=>{
+            this.categories = categoriesResponses;
+          },
+          error:(error)=>{
+            console.log(error);
+          }
+        })
+      },
+      error:(error)=>{
+        console.log(error);
+      },
+      complete: ()=>{
+        console.log("Category deleted completed");
+      }
+    })
+  }
 }

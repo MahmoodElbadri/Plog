@@ -11,6 +11,8 @@ public class CategoryProfile : Profile
             .ReverseMap();
         CreateMap<Category, CategoryResponse>()
             .ReverseMap();
+        CreateMap<Category, CategoryUpdateRequest>()
+            .ReverseMap();
     }
 }
 

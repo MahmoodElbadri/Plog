@@ -30,4 +30,8 @@ export class CategoryService {
   updateCategory(id: string, updateCategoryRequest: UpdateCategoryRequest):Observable<category>{
    return this.http.put<category>(`${environment.apiUrl}/categories/${id}`,updateCategoryRequest);
   }
+
+  deleteCategory(id: string):Observable<void>{
+    return this.http.delete<void>(`${environment.apiUrl}/categories/${id}`);
+  }
 }

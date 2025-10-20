@@ -20,4 +20,8 @@ export class BlogPostService {
   getBlogPosts():Observable<BlogPost[]>{
     return this.http.get<BlogPost[]>(`${environment.apiUrl}/blogposts`);
   }
+
+  getBlogPostByID(id: string):Observable<BlogPost>{
+    return this.http.get<BlogPost>(`${environment.apiUrl}/blogposts/${id}`);
+  }
 }

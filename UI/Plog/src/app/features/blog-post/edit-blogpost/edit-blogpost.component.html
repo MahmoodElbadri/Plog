@@ -1,1 +1,113 @@
-<p>edit-blogpost works!</p>
+<div class="container mt-5 pt-4">
+  <div>
+    <h1>Add BlogPost</h1>
+  </div>
+
+  <ng-container *ngIf="model">
+    <form #form="ngForm" (ngSubmit)="onFormSubmit()">
+      <div class="form-group mt-4">
+        <label for="title" class="form-label">Title</label>
+        <input
+          type="text"
+          name="title"
+          id="title"
+          [(ngModel)]="model.title"
+          class="form-control mt-2"
+          placeholder="Enter Title">
+      </div>
+      <div class="form-group mt-4">
+        <label for="urlHandle" class="form-label">Url Handle</label>
+        <input
+          type="text"
+          name="urlHandle"
+          id="urlHandle"
+          class="form-control mt-2"
+          [(ngModel)]="model.urlHandle"
+          placeholder="Enter Url Handle">
+      </div>
+      <div class="form-group mt-4">
+        <label for="shortDescription" class="form-label">Short Description</label>
+        <input
+          type="text"
+          name="shortDescription"
+          id="shortDescription"
+          [(ngModel)]="model.shortDescription"
+          class="form-control mt-2"
+          placeholder="Enter Short Description">
+      </div>
+      <div class="form-group mt-4">
+        <label for="featuredImageUrl" class="form-label">Feature Image Url</label>
+        <ng-container *ngIf="model.featureImageUrl != ''">
+          <div>
+            <img [src]="model.featureImageUrl" alt="Featured Image" height="100" class="my-2">
+          </div>
+        </ng-container>
+        <input
+          type="text"
+          name="featureImageUrl"
+          id="featuredImageUrl"
+          class="form-control mt-2"
+          [(ngModel)]="model.featureImageUrl"
+          placeholder="Enter Featured Image Url">
+      </div>
+      <div class="form-group mt-3">
+        <label for="publishedDate">Published Date</label>
+        <input type="date" name="publishedDate" id="publishedDate" class="form-control"
+               [ngModel]="model.publishedDate | date:'yyyy-MM-dd'"
+               (ngModelChange)="model.publishedDate = $event">
+      </div>
+      <div class="form-group mt-4">
+        <label for="author" class="form-label">Author</label>
+        <input
+          type="text"
+          name="author"
+          id="author"
+          [(ngModel)]="model.author"
+          class="form-control mt-2"
+          placeholder="Enter Author">
+      </div>
+      <div class="form-group mt-4">
+        <label for="content" class="form-label">Content</label>
+        <div class="d-flex flex-row">
+          <div class="col-6">
+          <textarea
+            name="content"
+            id="content"
+            [(ngModel)]="model.content"
+            class="form-control mt-2"
+            style="height: 200px; max-height: 350px;"
+            placeholder="Enter Content"></textarea>
+          </div>
+          <div class="col-6 p-2">
+            <div class="col-6 p-2" style="overflow-y: scroll; height: 200px; width: 100%; max-height: 350px;">
+              <markdown [data]="model.content"></markdown>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group mt-4">
+        <label for="categories" class="form-label">Categories</label>
+        <ng-container *ngIf="categories$ | async as categories"> <!--and this also-->
+          <select class="form-control" name="categories" id="categories"
+                  [(ngModel)]="selectedCategories" multiple
+                  [size]="Math.min(5, categories?.length || 0)">
+            <option *ngFor="let cat of categories" [ngValue]="cat.id">
+              {{ cat.name }}
+            </option>
+          </select>
+
+        </ng-container>
+      </div>
+      <div class="form-group mt-4">
+        <label for="isVisible" class="form-label mr-4 ">Is Visible? </label>
+        <input type="checkbox" name="isVisible"
+               [(ngModel)]="model.isVisible"
+               value="isVisible">
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary col-6">Submit</button>
+        <button type="reset" class="btn btn-danger col-6">Reset</button>
+      </div>
+    </form>
+  </ng-container>
+</div>

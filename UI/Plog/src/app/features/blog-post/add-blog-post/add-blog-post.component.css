@@ -1,0 +1,4 @@
+select[multiple] {
+  min-height: 100px;
+  padding: 0.25rem;
+}

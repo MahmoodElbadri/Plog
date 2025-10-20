@@ -85,6 +85,19 @@
       </div>
     </div>
     <div class="form-group mt-4">
+      <label for="categories" class="form-label">Categories</label>
+      <ng-container *ngIf="categories$ | async as categories"> <!--and this also-->
+        <select class="form-control" name="categories" id="categories"
+                [(ngModel)]="model.categories" multiple
+                [size]="Math.min(5, categories?.length || 0)">
+          <option *ngFor="let cat of categories" [ngValue]="cat.id">
+            {{ cat.name }}
+          </option>
+        </select>
+
+      </ng-container>
+    </div>
+    <div class="form-group mt-4">
       <label for="isVisible" class="form-label mr-4 ">Is Visible? </label>
       <input type="checkbox" name="isVisible"
              [(ngModel)]="model.isVisible"

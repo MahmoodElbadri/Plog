@@ -7,4 +7,5 @@ export interface AddBlogPostModel {
   urlHandle: string;
   publishedDate: string;
   isVisible: boolean;
+  categories: string[];
 }

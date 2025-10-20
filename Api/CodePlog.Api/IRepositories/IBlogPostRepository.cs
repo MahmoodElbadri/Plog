@@ -8,4 +8,5 @@ public interface IBlogPostRepository
     Task<Post> CreateAsync(Post blogPost);
     Task<IEnumerable<Post>> GetAllAsync();
     Task<Post?> GetPostByIDAsync(Guid id);
+    Task<Post?> UpdatePostAsync(Guid id, Post blogPost);
 }

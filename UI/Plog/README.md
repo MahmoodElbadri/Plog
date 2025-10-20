@@ -1,27 +1,106 @@
-# Plog
+<div align="center">
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+# ✨ Plog — Your Personal Blogging UI
 
-## Development server
+[![Angular](https://img.shields.io/badge/Angular-16-DD0031?logo=angular&logoColor=white)](https://angular.io/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![RxJS](https://img.shields.io/badge/RxJS-7-B7178C?logo=reactivex&logoColor=white)](https://rxjs.dev/)
+[![Node](https://img.shields.io/badge/Node.js-18-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](#-license)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#-contributing)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+💖 Crafted with care to make writing and managing posts a joy.
 
-## Code scaffolding
+</div>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 🌟 Overview
+Plog is an Angular-based UI for creating, editing, and exploring blog posts. It integrates with a backend API and provides a smooth authoring experience with category management, lists, and detail pages.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+If you’re running this within the full-stack solution, this is the UI portion located at `UI/Plog`.
 
-## Running unit tests
+## ✨ Features
+- 📝 Create and edit blog posts
+- 🗂️ Categorize posts and filter by category
+- ⚡ Instant updates powered by RxJS Observables
+- 🧭 Angular routing for a clean, SPA experience
+- 🎯 Typed models with TypeScript
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🧰 Tech Stack
+- Angular 16
+- TypeScript
+- RxJS
+- HTML/CSS
 
-## Running end-to-end tests
+## 🚀 Getting Started
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### 1) Prerequisites
+- Node.js 16+ (18+ recommended)
+- Angular CLI globally installed: `npm i -g @angular/cli`
 
-## Further help
+### 2) Install dependencies
+```
+npm install
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### 3) Start the dev server
+```
+ng serve
+```
+Then visit: http://localhost:4200/
+
+The app will auto-reload as you change files. ✅
+
+## 🛠️ Available Scripts
+- `ng serve` — start dev server
+- `ng build` — build for production (output in `dist/`)
+- `ng test` — run unit tests with Karma
+- `ng e2e` — run end-to-end tests (if an e2e runner is configured)
+
+## 🗂️ Project Structure (UI)
+```
+UI/Plog
+├─ src/
+│  ├─ app/
+│  │  └─ features/
+│  │     ├─ blog-post/
+│  │     │  ├─ add-blog-post/
+│  │     │  ├─ edit-blogpost/
+│  │     │  ├─ blog-post-list/
+│  │     │  ├─ models/
+│  │     │  └─ services/
+│  │     └─ category/
+│  │        ├─ add-category/
+│  │        ├─ edit-category/
+│  │        ├─ category-list/
+│  │        ├─ models/
+│  │        └─ services/
+│  └─ environments/
+├─ angular.json
+├─ package.json
+└─ README.md
+```
+
+## 🗃️ Categories
+- Manage categories (add, edit, delete) under the Admin routes.
+- Categories are used in blog post forms (multi-select) via CategoryService.
+- Related code lives in `src/app/features/category`.
+
+## 🧩 Tips & Notes
+- Use `ng generate component <name>` to scaffold new components.
+- Make sure your API is running if the UI relies on live data.
+- Adjust environment files in `src/environments` for API base URLs.
+
+## 📸 Screenshots (optional)
+Add your UI screenshots here to make the README even more lovely!
+
+## 🤝 Contributing
+Have ideas to make Plog better? PRs are welcome! Please open an issue or pull request.
+
+## 📜 License
+This project is licensed under the MIT License.
+
+---
+
+Made with ❤️ on 2025-10-20

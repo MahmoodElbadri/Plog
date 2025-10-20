@@ -12,6 +12,11 @@ public class BlogPostProfile : Profile
             .ReverseMap();
         CreateMap<BlogPostAddRequest, Post>()
             .ForMember(dest => dest.ID, opt => opt.MapFrom(src => Guid.NewGuid()))
-            .ForMember(dest => dest.Categories, opt => opt.Ignore());
+            .ForMember(dest => dest.Categories, opt => opt.Ignore())
+            .ReverseMap();
+        CreateMap<BlogPostUpdateRequest, Post>()
+            .ForMember(dest => dest.ID, opt => opt.MapFrom(src => Guid.NewGuid()))
+            .ForMember(dest => dest.Categories, opt => opt.Ignore())
+            .ReverseMap();
     }
 }

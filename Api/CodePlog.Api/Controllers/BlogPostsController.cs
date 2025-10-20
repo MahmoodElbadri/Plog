@@ -5,6 +5,7 @@ using CodePlog.Api.Models.Domain.BlogPost;
 using CodePlog.Api.Models.Domain.BlogPost.Dtos;
 using CodePlog.Api.Models.Domain.BlogPost.Validations;
 using CodePlog.Api.Repositories;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CodePlog.Api.Controllers;
@@ -70,5 +71,41 @@ public class BlogPostsController(IBlogPostRepository _repo,
             return Ok(postResponse);
         }
         return NotFound();
+    }
+
+    [HttpPut("{id:Guid}")]
+    public async Task<ActionResult<BlogPostResponse>> UpdatePost(Guid id, [FromBody] BlogPostUpdateRequest updateRequest)
+    {
+        var validator = new PostUpdateRequestValidator(_categoryRepository);
+        var validationResult = await validator.ValidateAsync(updateRequest);
+
+        if (!validationResult.IsValid)
+        {
+            return BadRequest(validationResult.Errors);
+        }
+
+        // Map basic properties to Post model
+        var blogPostModel = _mapper.Map<Post>(updateRequest);
+
+        // Handle categories - convert Guid[] to Category objects
+        if (updateRequest.Categories != null && updateRequest.Categories.Length > 0)
+        {
+            blogPostModel.Categories = new List<Category>();
+
+            foreach (var categoryId in updateRequest.Categories)
+            {
+                var category = await _categoryRepository.GetCategoryByIDAsync(categoryId);
+                if (category != null)
+                {
+                    blogPostModel.Categories.Add(category);
+                }
+            }
+        }
+
+        // Create the blog post
+        var blogPost = await _repo.CreateAsync(blogPostModel);
+        var blogPostResponse = _mapper.Map<BlogPostResponse>(blogPost);
+
+        return Ok(blogPostResponse);
     }
 }

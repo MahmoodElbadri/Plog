@@ -17,11 +17,22 @@ public class BlogPostRepository(PlogDbContext db) : IBlogPostRepository
 
     public async Task<IEnumerable<Post>> GetAllAsync()
     {
-        return await db.Posts.Include(tmp=>tmp.Categories).ToListAsync();
+        return await db.Posts.Include(tmp => tmp.Categories).ToListAsync();
     }
 
     public async Task<Post?> GetPostByIDAsync(Guid id)
     {
         return await db.Posts.Include(tmp => tmp.Categories).FirstOrDefaultAsync(tmp => tmp.ID == id);
+    }
+
+    public async Task<Post?> UpdatePostAsync(Guid id, Post blogPost)
+    {
+        var existingPost = db.Posts.Include(tmp => tmp.Categories)
+            .FirstOrDefault(tmp => tmp.ID == id);
+        if (existingPost is null) { return null; }
+        db.Entry(existingPost).CurrentValues.SetValues(blogPost);
+        existingPost.Categories = blogPost.Categories;
+        await db.SaveChangesAsync();
+        return blogPost;
     }
 }

@@ -15,6 +15,7 @@ export class EditBlogpostComponent implements OnInit, OnDestroy {
   id: string | null = null;
   routeSubscription?: Subscription;
   model?: BlogPost;
+  blogPostSubscription?: Subscription;
   categories$?: Observable<category[]>;
   protected readonly Math = Math;
   selectedCategories?: string[];
@@ -24,7 +25,7 @@ export class EditBlogpostComponent implements OnInit, OnDestroy {
               private catService: CategoryService) {
   }
 
-  onFormSubmit(){
+  onFormSubmit() {
 
   }
 
@@ -33,16 +34,16 @@ export class EditBlogpostComponent implements OnInit, OnDestroy {
     this.categories$ = this.catService.getCategories();
     this.routeSubscription = this.route.paramMap.subscribe(params => {
       this.id = params.get('id');
-      if(this.id){
-        this.blogPostService.getBlogPostByID(this.id).subscribe({
-          next:(response)=>{
+      if (this.id) {
+        this.blogPostSubscription = this.blogPostService.getBlogPostByID(this.id).subscribe({
+          next: (response) => {
             this.model = response;
-            this.selectedCategories = this.model.categories.map(x=>x.id)
+            this.selectedCategories = this.model.categories.map(x => x.id)
           },
-          error:(err)=>{
+          error: (err) => {
             console.log(err);
           },
-          complete:()=>{
+          complete: () => {
             console.log("Blog post retrieved successfully");
           }
         })
@@ -52,6 +53,7 @@ export class EditBlogpostComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.routeSubscription?.unsubscribe();
+    this.blogPostSubscription?.unsubscribe();
   }
 
 }

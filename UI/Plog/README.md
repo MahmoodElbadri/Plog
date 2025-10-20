@@ -55,8 +55,6 @@ The app will auto-reload as you change files. ✅
 ## 🛠️ Available Scripts
 - `ng serve` — start dev server
 - `ng build` — build for production (output in `dist/`)
-- `ng test` — run unit tests with Karma
-- `ng e2e` — run end-to-end tests (if an e2e runner is configured)
 
 ## 🗂️ Project Structure (UI)
 ```
@@ -92,9 +90,6 @@ UI/Plog
 - Make sure your API is running if the UI relies on live data.
 - Adjust environment files in `src/environments` for API base URLs.
 
-## 📸 Screenshots (optional)
-Add your UI screenshots here to make the README even more lovely!
-
 ## 🤝 Contributing
 Have ideas to make Plog better? PRs are welcome! Please open an issue or pull request.
 
@@ -103,4 +98,4 @@ This project is licensed under the MIT License.
 
 ---
 
-Made with ❤️ on 2025-10-20
+Made with ❤️

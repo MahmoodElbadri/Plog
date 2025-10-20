@@ -19,4 +19,9 @@ public class BlogPostRepository(PlogDbContext db) : IBlogPostRepository
     {
         return await db.Posts.Include(tmp=>tmp.Categories).ToListAsync();
     }
+
+    public async Task<Post?> GetPostByIDAsync(Guid id)
+    {
+        return await db.Posts.Include(tmp => tmp.Categories).FirstOrDefaultAsync(tmp => tmp.ID == id);
+    }
 }

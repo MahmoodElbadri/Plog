@@ -59,4 +59,16 @@ public class BlogPostsController(IBlogPostRepository _repo,
         var response = _mapper.Map<IEnumerable<BlogPostResponse>>(posts);
         return Ok(response);
     }
+
+    [HttpGet("{id:Guid}")]
+    public async Task<ActionResult<BlogPostResponse>> GetBlogPostById(Guid id)
+    {
+        var post = await _repo.GetPostByIDAsync(id);
+        if (post is not null)
+        {
+            var postResponse = _mapper.Map<BlogPostResponse>(post);
+            return Ok(postResponse);
+        }
+        return NotFound();
+    }
 }

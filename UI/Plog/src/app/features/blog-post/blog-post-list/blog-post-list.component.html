@@ -20,6 +20,7 @@
             <th>Short Description</th>
             <th>Is Visible</th>
             <th>Categories</th>
+            <th>Actions</th>
           </tr>
           </thead>
           <tbody>
@@ -37,6 +38,9 @@
               <ng-template #noCategories>
                 <span class="badge text-bg-secondary">No categories</span>
               </ng-template>
+            </td>
+            <td>
+              <a id="edit" class="btn btn-light" [routerLink]="['/admin/blog-posts/', post.id]" role="button">Edit</a>
             </td>
           </tr>
           </tbody>

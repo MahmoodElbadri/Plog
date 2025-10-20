@@ -19,6 +19,7 @@
             <th>Title</th>
             <th>Short Description</th>
             <th>Is Visible</th>
+            <th>Categories</th>
           </tr>
           </thead>
           <tbody>
@@ -27,6 +28,16 @@
             <td>{{ post.title }}</td>
             <td>{{ post.shortDescription }}</td>
             <td>{{ post.isVisible }}</td>
+            <td>
+              <ng-container *ngIf="post.categories && post.categories.length > 0; else noCategories">
+                <ng-container *ngFor="let cat of post.categories">
+                  <span class="badge text-bg-secondary me-2">{{ cat.name }}</span>
+                </ng-container>
+              </ng-container>
+              <ng-template #noCategories>
+                <span class="badge text-bg-secondary">No categories</span>
+              </ng-template>
+            </td>
           </tr>
           </tbody>
         </table>

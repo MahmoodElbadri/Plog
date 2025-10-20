@@ -1,6 +1,8 @@
 using CodePlog.Api.Data;
 using CodePlog.Api.IRepositories;
+using CodePlog.Api.Models.Domain.BlogPost.Validations;
 using CodePlog.Api.Repositories;
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,6 +21,7 @@ builder.Services.AddAutoMapper(typeof(BlogPostProfile));
 builder.Services.AddAutoMapper(typeof(CategoryProfile));
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IBlogPostRepository, BlogPostRepository>();
+builder.Services.AddValidatorsFromAssemblyContaining<PostValidations>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

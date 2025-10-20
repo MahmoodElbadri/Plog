@@ -24,6 +24,8 @@ export class BlogPostListComponent implements OnInit, OnDestroy {
     // this.blogPost$ = this.blogPostService.getBlogPosts();
     this.blogPostSubscription = this.blogPostService.getBlogPosts().subscribe({
       next: (response) => {
+        console.log(response);
+        // console.log("Categories are", response.categories);
         this.blogPosts = response;
       },
       error: (err) => {

@@ -10,4 +10,5 @@ public class BlogPostAddRequest
     public string Author { get; set; }
     public DateTime PublishedDate { get; set; }
     public bool IsVisible { get; set; }
+    public Guid[] Categories { get; set; }
 }

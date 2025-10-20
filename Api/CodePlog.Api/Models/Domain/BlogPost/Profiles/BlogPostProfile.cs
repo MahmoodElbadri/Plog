@@ -10,5 +10,8 @@ public class BlogPostProfile : Profile
             .ReverseMap();
         CreateMap<Post, BlogPostResponse>()
             .ReverseMap();
+        CreateMap<BlogPostAddRequest, Post>()
+            .ForMember(dest => dest.ID, opt => opt.MapFrom(src => Guid.NewGuid()))
+            .ForMember(dest => dest.Categories, opt => opt.Ignore());
     }
 }

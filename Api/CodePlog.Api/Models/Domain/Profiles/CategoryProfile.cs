@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using CodePlog.Api.Models.Domain.Dtos;
+using CodePlog.Api.Models.Domain.CategoryFiles.Dtos;
 
 namespace CodePlog.Api.Models.Domain.Profiles;
 

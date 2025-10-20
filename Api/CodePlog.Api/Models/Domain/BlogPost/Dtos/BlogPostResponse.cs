@@ -1,4 +1,6 @@
-﻿namespace CodePlog.Api.Models.Domain.BlogPost.Dtos;
+﻿using CodePlog.Api.Models.Domain.CategoryFiles.Dtos;
+
+namespace CodePlog.Api.Models.Domain.BlogPost.Dtos;
 
 public class BlogPostResponse
 {
@@ -11,4 +13,5 @@ public class BlogPostResponse
     public string Author { get; set; }
     public DateTime PublishedDate { get; set; }
     public bool IsVisible { get; set; }
+    public IEnumerable<CategoryResponse> Categories { get; set; }
 }

@@ -2,7 +2,7 @@
 using CodePlog.Api.Data;
 using CodePlog.Api.IRepositories;
 using CodePlog.Api.Models.Domain;
-using CodePlog.Api.Models.Domain.Dtos;
+using CodePlog.Api.Models.Domain.CategoryFiles.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 

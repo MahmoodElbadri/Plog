@@ -1,0 +1,25 @@
+<div class="container pt-4 mt-4">
+  <div class="row">
+    <div class="col-12">
+      <h1>Blog {{ post?.title }}</h1>
+    </div>
+
+    <ng-container *ngIf="post" else noPost>
+      <div class="col-12">
+        <h2>{{ post.shortDescription }}</h2>
+        <div>
+          <img src="https://picsum.photos/300/100" class="card-img-top" alt="blog post image">
+        </div>
+        <markdown [data]="post.content"></markdown>
+        <div class="text-muted">By {{ post.author }} on {{ post.publishedDate | date: 'medium' }}</div>
+      </div>
+    </ng-container>
+
+    <ng-template #noPost>
+      <div class="alert alert-warning text-center mt-4">
+        No blog post found.
+      </div>
+    </ng-template>
+    
+  </div>
+</div>

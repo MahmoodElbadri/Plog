@@ -6,8 +6,18 @@ import {EditCategoryComponent} from "./features/category/edit-category/edit-cate
 import {BlogPostListComponent} from "./features/blog-post/blog-post-list/blog-post-list.component";
 import {AddBlogPostComponent} from "./features/blog-post/add-blog-post/add-blog-post.component";
 import {EditBlogpostComponent} from "./features/blog-post/edit-blogpost/edit-blogpost.component";
+import { HomeComponent } from './features/public/home/home.component';
+import { BlogDetailsComponent } from './features/public/blog-details/blog-details.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'blog/:urlHandle',
+    component: BlogDetailsComponent
+  },
   {
     path: 'admin/categories',
     component: CategoryListComponent

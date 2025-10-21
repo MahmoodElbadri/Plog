@@ -7,4 +7,5 @@ public class PlogDbContext(DbContextOptions<PlogDbContext> options):DbContext(op
 {
     public DbSet<Post> Posts { get; set; }
     public DbSet<Category> Categories { get; set; }
+    public DbSet<BlogImage> blogImages { get; set; }
 }

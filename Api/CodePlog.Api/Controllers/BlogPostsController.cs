@@ -73,6 +73,18 @@ public class BlogPostsController(IBlogPostRepository _repo,
         return NotFound();
     }
 
+    [HttpGet("{url}")]
+    public async Task<ActionResult<BlogPostResponse>> GetBlogPostByUrl(string url)
+    {
+        var post = await _repo.GetPostByUrlHandleAsync(url);
+        if (post is not null)
+        {
+            var postResponse = _mapper.Map<BlogPostResponse>(post);
+            return Ok(postResponse);
+        }
+        return NotFound();
+    }
+
     [HttpPut("{id:Guid}")]
     public async Task<ActionResult<BlogPostResponse>> UpdatePost(Guid id, [FromBody] BlogPostUpdateRequest updateRequest){
         var validator = new PostUpdateRequestValidator(_categoryRepository);
@@ -106,5 +118,11 @@ public class BlogPostsController(IBlogPostRepository _repo,
         var blogPostResponse = _mapper.Map<BlogPostResponse>(blogPost);
 
         return Ok( blogPostResponse);
+    }
+
+    [HttpDelete("{id:guid}")]
+    public async Task<IActionResult> DeletePost(Guid id){
+        var post = await _repo.DeletePostAsync(id);
+        return (post is false) ? NotFound() : NoContent();
     }
 }

@@ -30,8 +30,14 @@ public class BlogPostRepository(PlogDbContext db) : IBlogPostRepository
         var existingPost = db.Posts.Include(tmp => tmp.Categories)
             .FirstOrDefault(tmp => tmp.ID == id);
         if (existingPost is null) { return null; }
-        db.Entry(existingPost).CurrentValues.SetValues(blogPost);
+        existingPost.Title = blogPost.Title;
+        existingPost.Content = blogPost.Content;
+        existingPost.Author = blogPost.Author;
+        existingPost.UrlHandle = blogPost.UrlHandle;
+        existingPost.PublishedDate = blogPost.PublishedDate;
+        existingPost.IsVisible = blogPost.IsVisible;
         existingPost.Categories = blogPost.Categories;
+        existingPost.ShortDescription = blogPost.ShortDescription;
         await db.SaveChangesAsync();
         return blogPost;
     }

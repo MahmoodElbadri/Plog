@@ -74,8 +74,7 @@ public class BlogPostsController(IBlogPostRepository _repo,
     }
 
     [HttpPut("{id:Guid}")]
-    public async Task<ActionResult<BlogPostResponse>> UpdatePost(Guid id, [FromBody] BlogPostUpdateRequest updateRequest)
-    {
+    public async Task<ActionResult<BlogPostResponse>> UpdatePost(Guid id, [FromBody] BlogPostUpdateRequest updateRequest){
         var validator = new PostUpdateRequestValidator(_categoryRepository);
         var validationResult = await validator.ValidateAsync(updateRequest);
 
@@ -103,9 +102,9 @@ public class BlogPostsController(IBlogPostRepository _repo,
         }
 
         // Create the blog post
-        var blogPost = await _repo.CreateAsync(blogPostModel);
+        var blogPost = await _repo.UpdatePostAsync(id, blogPostModel);
         var blogPostResponse = _mapper.Map<BlogPostResponse>(blogPost);
 
-        return Ok(blogPostResponse);
+        return Ok( blogPostResponse);
     }
 }

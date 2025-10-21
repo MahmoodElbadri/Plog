@@ -1,10 +1,11 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {Observable, Subscription} from "rxjs";
 import {BlogPostService} from "../services/blog-post.service";
 import {BlogPost} from "../models/Blog-Post-Model";
 import {CategoryService} from "../../category/services/category.service";
 import {category} from "../../category/models/category.model";
+import {UpdateBlogPostModel} from "../models/update-blog-post-model";
 
 @Component({
   selector: 'app-edit-blogpost',
@@ -19,14 +20,40 @@ export class EditBlogpostComponent implements OnInit, OnDestroy {
   categories$?: Observable<category[]>;
   protected readonly Math = Math;
   selectedCategories?: string[];
+  updateBlogPostSubscription?: Subscription;
 
   constructor(private route: ActivatedRoute,
               private blogPostService: BlogPostService,
-              private catService: CategoryService) {
+              private catService: CategoryService,
+              private router: Router) {
   }
 
   onFormSubmit() {
-
+    if (this.id && this.model) {
+      let updateBlogPostModel: UpdateBlogPostModel = {
+        title: this.model.title,
+        shortDescription: this.model.shortDescription,
+        featuredImageUrl: this.model.featureImageUrl,
+        content: this.model.content,
+        author: this.model.author,
+        urlHandle: this.model.urlHandle,
+        publishedDate: this.model.publishedDate,
+        isVisible: this.model.isVisible,
+        categories: this.selectedCategories ?? []
+      }
+     this.updateBlogPostSubscription = this.blogPostService.updateBlogPost(this.id,updateBlogPostModel).subscribe({
+        next: ()=>{
+          console.log(updateBlogPostModel)
+          this.router.navigateByUrl("/admin/blog-posts");
+        },
+        error:(err)=>{
+          console.log(err);
+        },
+        complete:()=>{
+          console.log("Blog post updated successfully");
+        }
+      })
+    }
   }
 
 
@@ -54,6 +81,7 @@ export class EditBlogpostComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.routeSubscription?.unsubscribe();
     this.blogPostSubscription?.unsubscribe();
+    this.updateBlogPostSubscription?.unsubscribe();
   }
 
 }

@@ -25,6 +25,7 @@ public class CategoriesController : ControllerBase
     }
 
     [HttpPost]
+    [Authorize(Roles = "Writer")]
     public async Task<ActionResult<CategoryResponse>> AddCategory([FromBody] CategoryAddRequest addRequest)
     {
         var category = _mapper.Map<Category>(addRequest);
@@ -55,6 +56,7 @@ public class CategoriesController : ControllerBase
     }
 
     [HttpPut("{id:Guid}")]
+    [Authorize(Roles = "Writer")]
     public async Task<ActionResult> UpdateCategory([FromRoute] Guid id, [FromBody] CategoryUpdateRequest updateRequest)
     {
         var categoryModel = _mapper.Map<Category>(updateRequest);
@@ -72,6 +74,7 @@ public class CategoriesController : ControllerBase
     }
 
     [HttpDelete("{id:Guid}")]
+    [Authorize(Roles = "Writer")]
     public async Task<ActionResult> DeleteCategory([FromRoute] Guid id)
     {
         var category = await _categoryRepository.DeleteCategory(id);

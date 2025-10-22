@@ -1,0 +1,4 @@
+body {
+  /* 70px gives a little space. 56px is the default navbar height. */
+  padding-top: 70px;
+}

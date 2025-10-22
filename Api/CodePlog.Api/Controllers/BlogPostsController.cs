@@ -5,6 +5,7 @@ using CodePlog.Api.Models.Domain.BlogPost;
 using CodePlog.Api.Models.Domain.BlogPost.Dtos;
 using CodePlog.Api.Models.Domain.BlogPost.Validations;
 using CodePlog.Api.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,6 +18,7 @@ public class BlogPostsController(IBlogPostRepository _repo,
     IMapper _mapper) : ControllerBase
 {
     [HttpPost]
+    [Authorize(Roles = "Writer")]
     public async Task<ActionResult<BlogPostResponse>> CreateBlogPost([FromBody] BlogPostAddRequest addRequest)
     {
         // Validate the request
@@ -86,6 +88,7 @@ public class BlogPostsController(IBlogPostRepository _repo,
     }
 
     [HttpPut("{id:Guid}")]
+    [Authorize(Roles = "Writer")]
     public async Task<ActionResult<BlogPostResponse>> UpdatePost(Guid id, [FromBody] BlogPostUpdateRequest updateRequest){
         var validator = new PostUpdateRequestValidator(_categoryRepository);
         var validationResult = await validator.ValidateAsync(updateRequest);
@@ -121,6 +124,7 @@ public class BlogPostsController(IBlogPostRepository _repo,
     }
 
     [HttpDelete("{id:guid}")]
+    [Authorize(Roles = "Writer")]
     public async Task<IActionResult> DeletePost(Guid id){
         var post = await _repo.DeletePostAsync(id);
         return (post is false) ? NotFound() : NoContent();

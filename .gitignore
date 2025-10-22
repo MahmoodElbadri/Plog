@@ -6,3 +6,8 @@
 /Api/.vs/CodePlog.Api.slnx
 /UI/Plog/src/app/environments.ts
 /Api/CodePlog.Api/CodePlog.Api.csproj
+/Api/.vs/CodePlog.Api/CopilotIndices/18.0.877.25981/CodeChunks.db
+/Api/.vs/CodePlog.Api/CopilotIndices/18.0.877.25981/SemanticSymbols.db
+*.db
+*.db-shm
+*.db-wal

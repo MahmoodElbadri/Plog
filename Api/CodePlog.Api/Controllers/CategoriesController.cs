@@ -3,6 +3,7 @@ using CodePlog.Api.Data;
 using CodePlog.Api.IRepositories;
 using CodePlog.Api.Models.Domain;
 using CodePlog.Api.Models.Domain.CategoryFiles.Dtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -33,6 +34,7 @@ public class CategoriesController : ControllerBase
     }
 
     [HttpGet]
+    [Authorize]
     public async Task<ActionResult<List<CategoryResponse>>> GetAllCategories()
     {
         var categories = await _categoryRepository.GetAllAsync();

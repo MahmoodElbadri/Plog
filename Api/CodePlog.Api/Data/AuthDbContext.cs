@@ -42,10 +42,12 @@ public class AuthDbContext : IdentityDbContext
             NormalizedUserName = "ADMIN",
             Email = "admin@dud.com",
             NormalizedEmail = "ADMIN@DUD.COM",
+            ConcurrencyStamp = "88cd145f-bc43-4134-8d48-b230ea898f9e",
+            SecurityStamp = "38e22768-bc56-462f-843f-001ca4106eaa",
+            PasswordHash = "AQAAAAIAAYagAAAAEBaSTOM0VBTIc8T0FdBCSN7pFgR+IXJ2Wkzt0rbf8ap/QuwMa6hYPeRnMX9dy01Lrw=="
         };
 
-        var passwordHasher = new PasswordHasher<IdentityUser>();
-        adminUser.PasswordHash = passwordHasher.HashPassword(adminUser, "Menna@123");
+        //System.Console.WriteLine(new PasswordHasher<IdentityUser>().HashPassword(null, "Menna@123"));
 
         builder.Entity<IdentityUser>().HasData(adminUser);
 

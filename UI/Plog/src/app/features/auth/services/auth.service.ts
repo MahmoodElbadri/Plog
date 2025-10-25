@@ -27,4 +27,7 @@ export class AuthService {
     localStorage.setItem("user-roles", user.roles.join(","));
   }
 
+  user():Observable<User | undefined>{
+    return this.$user.asObservable();
+  }
 }

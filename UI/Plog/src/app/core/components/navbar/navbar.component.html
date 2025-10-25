@@ -35,10 +35,22 @@
       </ul>
 
       <!-- This div will be pushed to the far right -->
-      <div class="d-flex">
-        
-      </div>
+      <div class="d-flex align-items-center">
 
+        <ng-container *ngIf="!user; else ShowLogout">
+          <a class="btn btn-light" routerLinkActive="active" [routerLink]="['/login']">
+            Login
+          </a>
+        </ng-container>
+
+        <ng-template #ShowLogout>
+          <span class="me-2">{{user?.email}}</span>
+          <button class="btn btn-light" (click)="onLogout()">
+            Logout
+          </button>
+        </ng-template>
+
+      </div>
     </div>
   </div>
 </nav>

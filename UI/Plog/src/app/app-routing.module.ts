@@ -9,43 +9,59 @@ import {EditBlogpostComponent} from "./features/blog-post/edit-blogpost/edit-blo
 import { HomeComponent } from './features/public/home/home.component';
 import { BlogDetailsComponent } from './features/public/blog-details/blog-details.component';
 import { LoginComponent } from './features/auth/login/login.component';
+import { authGuard } from './features/auth/guards/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
+    title: 'Home - Blog'
   },
   {
     path: 'blog/:urlHandle',
-    component: BlogDetailsComponent
+    component: BlogDetailsComponent,
+    title: 'Blog Details - Blog'
   },
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
+    title: 'Login - Blog'
   },
   {
     path: 'admin/categories',
-    component: CategoryListComponent
+    component: CategoryListComponent,
+    canActivate: [authGuard],
+    title: 'Categories - Blog'
   },
   {
     path: 'admin/categories/add',
-    component: AddCategoryComponent
+    component: AddCategoryComponent,
+    canActivate: [authGuard],
+    title: 'Add Category - Blog'
   },
   {
     path: 'admin/categories/:id'
-    , component: EditCategoryComponent
+    , component: EditCategoryComponent,
+    canActivate: [authGuard],
+    title: 'Edit Category - Blog'
   },
   {
     path: 'admin/blog-posts',
-    component: BlogPostListComponent
+    component: BlogPostListComponent,
+    canActivate: [authGuard],
+    title: 'Blog Posts - Blog'
   },
   {
     path: 'admin/blog-posts/add',
-    component: AddBlogPostComponent
+    component: AddBlogPostComponent,
+    canActivate: [authGuard],
+    title: 'Add Blog Post - Blog'
   },
   {
     path: 'admin/blog-posts/:id',
-    component: EditBlogpostComponent
+    component: EditBlogpostComponent,
+    canActivate: [authGuard],
+    title: 'Edit Blog Post - Blog'
   }
 ];
 

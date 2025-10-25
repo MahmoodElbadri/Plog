@@ -35,7 +35,7 @@ public class CategoriesController : ControllerBase
     }
 
     [HttpGet]
-    [Authorize]
+    //[Authorize]
     public async Task<ActionResult<List<CategoryResponse>>> GetAllCategories()
     {
         var categories = await _categoryRepository.GetAllAsync();

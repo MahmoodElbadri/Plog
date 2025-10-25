@@ -1,10 +1,10 @@
-import {Injectable} from '@angular/core';
-import {AddBlogPostModel} from "../models/add-blog-post-model";
-import {Observable} from "rxjs";
-import {BlogPost} from "../models/Blog-Post-Model";
-import {HttpClient} from "@angular/common/http";
-import {environment} from "../../../../../environments/environment";
-import {UpdateBlogPostModel} from "../models/update-blog-post-model";
+import { Injectable } from '@angular/core';
+import { AddBlogPostModel } from "../models/add-blog-post-model";
+import { Observable } from "rxjs";
+import { BlogPost } from "../models/Blog-Post-Model";
+import { HttpClient } from "@angular/common/http";
+import { environment } from "../../../../../environments/environment";
+import { UpdateBlogPostModel } from "../models/update-blog-post-model";
 
 @Injectable({
   providedIn: 'root'
@@ -14,27 +14,28 @@ export class BlogPostService {
 
   }
 
-  addBlogPost(model: AddBlogPostModel): Observable<BlogPost> {
-    return this.http.post<BlogPost>(`${environment.apiUrl}/BlogPosts`, model);
-  }
 
-  getBlogPosts():Observable<BlogPost[]>{
+  getBlogPosts(): Observable<BlogPost[]> {
     return this.http.get<BlogPost[]>(`${environment.apiUrl}/blogposts`);
   }
 
-  getBlogPostByID(id: string):Observable<BlogPost>{
+  getBlogPostByID(id: string): Observable<BlogPost> {
     return this.http.get<BlogPost>(`${environment.apiUrl}/blogposts/${id}`);
   }
 
-  updateBlogPost(id: string, updateBlogPost: UpdateBlogPostModel):Observable<BlogPost>{
-    return this.http.put<BlogPost>(`${environment.apiUrl}/blogposts/${id}`, updateBlogPost);
+  addBlogPost(model: AddBlogPostModel): Observable<BlogPost> {
+    return this.http.post<BlogPost>(`${environment.apiUrl}/BlogPosts?AddAuth=true`, model);
   }
 
-  deleteBlogPost(id:string):Observable<void>{
-    return this.http.delete<void>(`${environment.apiUrl}/blogposts/${id}`);
+  updateBlogPost(id: string, updateBlogPost: UpdateBlogPostModel): Observable<BlogPost> {
+    return this.http.put<BlogPost>(`${environment.apiUrl}/blogposts/${id}?AddAuth=true`, updateBlogPost);
   }
 
-  getBlogPostByUrlHandle(urlHandle:string):Observable<BlogPost>{
+  deleteBlogPost(id: string): Observable<void> {
+    return this.http.delete<void>(`${environment.apiUrl}/blogposts/${id}?AddAuth=true`);
+  }
+
+  getBlogPostByUrlHandle(urlHandle: string): Observable<BlogPost> {
     return this.http.get<BlogPost>(`${environment.apiUrl}/blogposts/${urlHandle}`);
   }
 }
